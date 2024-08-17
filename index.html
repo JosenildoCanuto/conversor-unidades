@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Unidades</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <h1>Conversor de Unidades</h1>
+      <p>
+        Para realizar conversões entre diversas unidades de medida, utilize este
+        nosso conversor on-line. Basta digitar o valor, escolher a unidade
+        desejada e para qual unidade você deseja converter. O resultado exibir
+        quando for apertado a tecla enter.
+      </p>
+      <select name="select-options">
+        <option value="comprimento">Comprimento</option>
+        <option value="temperatura">Temperatura</option>
+        <option value="peso">Peso</option>
+      </select>
+      <div class="container-comprimento">
+        <span>Valor:</span>
+        <input type="number" placeholder="Digite um valor" /> <br>
+        <span>De:</span>
+        <select name="select-comprimento">
+          <option value="km">Quilômetro (km)</option>
+          <option value="hm">Hectômetro (hm)</option>
+          <option value="dam">Decâmetro (dam)</option>
+          <option value="mm">Milímetro (mm)</option>
+          <option value="cm">Centímetro (cm)</option>
+          <option value="dm">Decímetro (dm)</option>
+        </select>
+        <br>
+        <span>Para:</span>
+        <select name="select-comprimento">
+          <option value="km">Quilômetro (km)</option>
+          <option value="hm">Hectômetro (hm)</option>
+          <option value="dam">Decâmetro (dam)</option>
+          <option value="mm">Milímetro (mm)</option>
+          <option value="cm">Centímetro (cm)</option>
+          <option value="dm">Decímetro (dm)</option>
+        </select>
+      </div>
+      <br>
+
+      <div class="container-temperatura">
+        <span>Valor:</span>
+        <input type="number" placeholder="Digite um valor" />
+        <br>
+        <span>De:</span>
+        <select name="select-temperatura">
+          <option value="c">Celsius (°C)</option>
+          <option value="f">"Graus Fahrenheit (°F)</option>
+          <option value="k">Kelvin (K)</option>
+        </select>
+        <br>
+        <span>Para:</span>
+        <select name="select-temperatura">
+          <option value="c">Celsius (°C)</option>
+          <option value="f">"Graus Fahrenheit (°F)</option>
+          <option value="k">Kelvin (K)</option>
+        </select>
+        <br>
+      </div>
+
+      <div class="container-peso">
+            <div class="container-temperatura">
+              <span>Valor:</span>
+              <input type="number" placeholder="Digite um valor" />
+              <br>
+              <span>De:</span>
+              <select name="select-temperatura">
+                <option value="c">Celsius (°C)</option>
+                <option value="f">Graus Fahrenheit (°F)</option>
+                <option value="k">Kelvin (K)</option>
+              </select>
+              <br>
+              <span>Para:</span>
+              <select name="select-peso">
+                <option value="dag">decagrama (dag)</option>
+                <option value="hg">"o hectograma (hg)</option>
+                <option value="kg">quilograma (kg)</option>
+                <option value="dg">decigrama (dg)</option>
+                <option value="cg">centigrama (cg)</option>
+                <option value="mg">miligrama (mg)</option>
+              </select>
+            </div>
+    </main>
+  </body>
+</html>
