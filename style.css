@@ -1,0 +1,66 @@
+html{
+    font-size: 62.5%;
+    font-family: 'ubuntu';
+}
+
+body{
+    margin: 0;
+}
+
+main{
+    max-width: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    color: green;
+}
+
+.select-options, .all-input{
+    width: 25rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    align-self: center;
+    text-align: center;
+    border: none;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.valor-input{
+    width: 24rem;
+    margin: 0.8rem 0 0;
+}
+
+/* .container-comprimento, .container-temperatura, .container-peso {
+    display: none;
+} */
+
+.container-comprimento {
+    text-align: center
+}
+
+.button-convert{
+    background-color: green;
+    font-size: 1.8rem;
+    margin: 2rem;
+    width: 20rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.7rem;
+    font-weight: bold;
+    color: white;
+    align-self: center;
+}
+
+.button-convert:hover{
+    background-color: rgb(2, 168, 2);
+}
+
+.icon{
+    width: 9rem;
+}
