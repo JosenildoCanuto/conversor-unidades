@@ -1,36 +1,49 @@
 let inputUnidades = document.querySelector('.select-options')
-let selectsOne = document.querySelectorAll('.select-unidades')
-
-let unitsComprimento = ["Quilômetro (km)", "Hectômetro (hm)", "Decâmetro (dam)", "Milímetro (mm)", "Centímetro (cm)", "Decímetro (dm)"]
-let unitsTemperatura = ["Celsius (°C)", "Graus Fahrenheit (°F)","Kelvin (K)"]
-let unitsPeso = ["Decagrama (dag)","Hectograma (hg)", "Quilograma (kg)", "Decigrama (dg)", "Centigrama (cg)", "Miligrama (mg)"]
+let selectsOne = document.querySelector('.select-unidades-one')
+let selectsTwo = document.querySelector('.select-unidades-two')
+let inputValue = document.querySelector('.valor-input')
 
 
-function unitsPropeties (){
-    for(let index in selectsOne){
-        selectsOne[index].innerHTML = '';
+let units = {
+    comprimento: ["Quilômetro (km)", "Hectômetro (hm)", "Decâmetro (dam)", "Milímetro (mm)", "Centímetro (cm)", "Decímetro (dm)"],
+    temperatura: ["Celsius (°C)", "Graus Fahrenheit (°F)","Kelvin (K)"],
+    peso: ["Decagrama (dag)","Hectograma (hg)", "Quilograma (kg)", "Decigrama (dg)", "Centigrama (cg)", "Miligrama (mg)"]
+}
 
-        function propetiest (valor){
-            for(let i in valor) {
-                let selectOptionOne = document.createElement('option');
-                selectOptionOne.innerHTML = valor[i];
-                selectsOne[index].appendChild(selectOptionOne);
-            }
-        }
+function uptadeSelectOptions (){
+    let selectUnits = units[inputUnidades.value] || [];
 
-        if(inputUnidades.value === 'comprimento'){
-            propetiest(unitsComprimento)
-        } else if (inputUnidades.value === 'temperatura'){
-            propetiest(unitsTemperatura)
-        } else {
-            propetiest(unitsPeso)
-        }
-        propetiest()
+        selectsOne.innerHTML = '';
+
+        selectUnits.forEach(unit => {
+            let newOption = document.createElement('option');
+            newOption.textContent = unit;
+            selectsOne.appendChild(newOption);
+        })
+
+        selectsTwo.innerHTML = '';
+
+        selectUnits.forEach(unit => {
+            let newOption = document.createElement('option');
+            newOption.textContent = unit;
+            selectsTwo.appendChild(newOption);
+        })
+}
+
+selectsOne.addEventListener('change', function() {
+    selectedIndexOne = parseInt(selectsOne.value, 10);
+    calcComprimento();
+});
+
+selectsTwo.addEventListener('change', function() {
+    selectedIndexTwo = parseInt(selectsTwo.value, 10);
+    calcComprimento();
+});
+
+function calcComprimento (){
+    if(selectedIndexOne > selectedIndexTwo){
+        console.log(inputValue.value * Math.pow(10, selectedIndexTwo));
     }
-    }
+}
 
-    
-
-unitsPropeties();
-
-
+uptadeSelectOptions();
