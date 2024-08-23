@@ -18,6 +18,7 @@ main{
 
 h1{
     color: green;
+    margin: 3.5rem 0 0 0;
 }
 
 .select-options, .all-input{
@@ -26,7 +27,7 @@ h1{
     padding: 0.5rem;
     align-self: center;
     text-align: center;
-    border: none;
+    border: rgb(113, 113, 113) 1px solid;
     border-radius: 0.5rem;
     margin: 1rem;
 }
@@ -63,4 +64,8 @@ h1{
 
 .icon{
     width: 9rem;
+}
+
+.result {
+    font-size: 2rem;
 }

@@ -38,29 +38,24 @@
           class="all-input valor-input"
         />
         <br />
-        <select name="select-comprimento" class="all-input select-unidades">
-          <option value="km">Quilômetro (km)</option>
-          <option value="hm">Hectômetro (hm)</option>
-          <option value="dam">Decâmetro (dam)</option>
-          <option value="mm">Milímetro (mm)</option>
-          <option value="cm">Centímetro (cm)</option>
-          <option value="dm">Decímetro (dm)</option>
+        <select name="select-comprimento" class="all-input select-unidades-one">
+          <option value="km" >Quilômetro (km)</option>
+          <option value="m">Metro (m)</option>
+          <option value="cm">Centímetros (cm)</option>
         </select>
         <br />
         <span>Para:</span><br />
-        <select name="select-comprimento" class="all-input select-unidades">
-          <option value="km">Quilômetro (km)</option>
-          <option value="hm">Hectômetro (hm)</option>
-          <option value="dam">Decâmetro (dam)</option>
-          <option value="mm">Milímetro (mm)</option>
-          <option value="cm">Centímetro (cm)</option>
-          <option value="dm">Decímetro (dm)</option>
+        <select name="select-comprimento" class="all-input select-unidades-two">
+          <option value="m">Metro (m)</option>
+          <option value="km" selected>Quilômetro (km)</option>
+          <option value="cm">Centímetros (cm)</option>
         </select>
       </div>
-      <button type="button" class="button-convert">
+      <button type="button" class="button-convert" onclick="calcComprimento">
         <i class="bi bi-arrow-repeat icon"></i>
         Converter
       </button>
+      <span class="result"></span>
     </main>
 
     <script src="script.js"></script>
