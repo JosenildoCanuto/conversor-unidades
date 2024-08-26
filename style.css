@@ -10,11 +10,13 @@ body{
 main{
     max-width: 100vh;
     margin: 0 auto;
+    padding: 0 3rem;
     text-align: center;
     font-size: 1.6rem;
     display: flex;
     flex-direction: column;
 }
+
 
 h1{
     color: green;
@@ -37,9 +39,7 @@ h1{
     margin: 0.8rem 0 0;
 }
 
-/* .container-comprimento, .container-temperatura, .container-peso {
-    display: none;
-} */
+
 
 .container-comprimento {
     text-align: center
@@ -48,7 +48,7 @@ h1{
 .button-convert{
     background-color: green;
     font-size: 1.8rem;
-    margin: 2rem;
+    margin: 1rem 1rem 1rem 0;
     width: 20rem;
     padding: 0.8rem;
     border: none;
@@ -58,14 +58,46 @@ h1{
     align-self: center;
 }
 
+.reset{
+    background-color: rgb(231, 0, 0);
+    margin: 0;
+    font-size: 1.8rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.7rem;
+    font-weight: bold;
+    color: white;
+    align-self: center;
+}
+
+.reset:hover{
+    background-color: rgb(255, 0, 0);
+}
+
 .button-convert:hover{
     background-color: rgb(2, 168, 2);
+}
+
+.btn-icons{
+    display: flex;
+    justify-content: center;
 }
 
 .icon{
     width: 9rem;
 }
 
+.t-result{
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
 .result {
+    margin-top: 1rem;
     font-size: 2rem;
+    font-weight: bold;
+}
+
+.visible {
+    display: none;
 }
